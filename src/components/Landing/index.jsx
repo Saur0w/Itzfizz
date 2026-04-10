@@ -14,6 +14,7 @@ export default function Landing() {
     const carRef = useRef(null);
     const textRef = useRef(null);
     const statsRefs = useRef([]);
+    const addToStatsRef = useRef(null);
 
     useGSAP(() => {
         gsap.from(roadRef.current, {
@@ -26,7 +27,7 @@ export default function Landing() {
             scrollTrigger: {
                 trigger: landingRef.current,
                 start: 'top top',
-                end: '+=250',
+                end: '+=300',
                 scrub: 1,
                 pin: true,
                 anticipatePin: 1
@@ -50,6 +51,38 @@ export default function Landing() {
 
     return (
         <section ref={landingRef} className="relative w-full h-screen bg-[#d1d1d1] overflow-hidden flex items-center">
+            <div
+                ref={addToStatsRef}
+                className="absolute top-[20%] left-[50%] bg-[#def54f] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px]"
+            >
+                <h2 className="text-4xl font-black text-black">58%</h2>
+                <p className="text-xs text-black mt-1">Increase in pick up point use</p>
+            </div>
+
+            <div
+                ref={addToStatsRef}
+                className="absolute top-[20%] left-[70%] bg-[#333333] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px]"
+            >
+                <h2 className="text-4xl font-black text-white">27%</h2>
+                <p className="text-xs text-white mt-1">Increase in pick up point use</p>
+            </div>
+
+            <div
+                ref={addToStatsRef}
+                className="absolute bottom-[20%] left-[45%] bg-[#6ac9ff] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px]"
+            >
+                <h2 className="text-4xl font-black text-black">23%</h2>
+                <p className="text-xs text-black mt-1">Decreased in customer phone calls</p>
+            </div>
+
+            <div
+                ref={addToStatsRef}
+                className="absolute bottom-[20%] left-[65%] bg-[#fa7328] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px]"
+            >
+                <h2 className="text-4xl font-black text-black">40%</h2>
+                <p className="text-xs text-black mt-1">Decreased in customer phone calls</p>
+            </div>
+
             <div ref={roadRef} className="relative w-full h-50 bg-[#1e1e1e] flex items-center overflow-hidden justify-center">
                 <div ref={textRef}
                      className="absolute top-0 left-0 h-full bg-[#45db7d] overflow-hidden flex items-center whitespace-nowrap"
@@ -61,7 +94,7 @@ export default function Landing() {
                 </div>
                 <div
                     ref={carRef}
-                    className="relative w-full h-full">
+                    className="relative w-full h-full bg-[#45db7d]">
                     <Image
                         src="/images/car.png"
                         alt="car"
