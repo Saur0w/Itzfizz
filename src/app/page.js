@@ -1,27 +1,37 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
-import { useEffect } from "react";
-import Landing from "@/components/Landing/index";
+import Landing from "@/components/Landing";
 
 export default function Home() {
+    const rafIdRef = useRef(null);
+
     useEffect(() => {
-        const lenis = new Lenis();
+        const lenis = new Lenis({
+            smoothWheel: true,
+            lerp: 0.08,
+            wheelMultiplier: 1.2,
+        });
 
         function raf(time) {
             lenis.raf(time);
-            requestAnimationFrame(raf);
+            rafIdRef.current = requestAnimationFrame(raf);
         }
 
-        requestAnimationFrame(raf);
+        rafIdRef.current = requestAnimationFrame(raf);
 
         return () => {
             lenis.destroy();
+            if (rafIdRef.current) {
+                cancelAnimationFrame(rafIdRef.current);
+            }
         };
     }, []);
-  return (
-    <div>
-      <Landing />
-    </div>
-  );
+
+    return (
+        <div>
+            <Landing />
+        </div>
+    );
 }
