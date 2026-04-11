@@ -73,7 +73,7 @@ export default function Landing() {
         >
             <div
                 ref={addToStatsRef}
-                className="absolute top-[20%] left-[50%] bg-[#def54f] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
+                className="absolute top-[5%] left-[50%] bg-[#def54f] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
             >
                 <h2 className="text-4xl font-black text-black">58%</h2>
                 <p className="text-xs text-black mt-1">Increase in pick up point use</p>
@@ -81,7 +81,7 @@ export default function Landing() {
 
             <div
                 ref={addToStatsRef}
-                className="absolute top-[20%] left-[70%] bg-[#333333] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
+                className="absolute top-[5%] left-[70%] bg-[#333333] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
             >
                 <h2 className="text-4xl font-black text-white">27%</h2>
                 <p className="text-xs text-white mt-1">Increase in pick up point use</p>
@@ -89,7 +89,7 @@ export default function Landing() {
 
             <div
                 ref={addToStatsRef}
-                className="absolute bottom-[20%] left-[45%] bg-[#6ac9ff] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
+                className="absolute bottom-[5%] left-[45%] bg-[#6ac9ff] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
             >
                 <h2 className="text-4xl font-black text-black">23%</h2>
                 <p className="text-xs text-black mt-1 text-center px-4">Decreased in customer phone calls</p>
@@ -97,7 +97,7 @@ export default function Landing() {
 
             <div
                 ref={addToStatsRef}
-                className="absolute bottom-[20%] left-[65%] bg-[#fa7328] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
+                className="absolute bottom-[5%] left-[65%] bg-[#fa7328] flex flex-col justify-center items-center shadow-lg w-60 h-40 rounded-[10px] z-20"
             >
                 <h2 className="text-4xl font-black text-black">40%</h2>
                 <p className="text-xs text-black mt-1 text-center px-4">Decreased in customer phone calls</p>
@@ -112,7 +112,7 @@ export default function Landing() {
                     className="absolute top-0 left-0 h-full bg-[#45db7d] overflow-hidden flex items-center whitespace-nowrap z-0"
                     style={{ width: '0%' }}
                 >
-                    <h1 className="text-[#111111] text-8xl font-black tracking-[0.5em] ml-[8vw]">
+                    <h1 className="text-[#111111] text-8xl font-black tracking-[0.5em] leading-none">
                         WELCOME ITZFIZZ
                     </h1>
                 </div>
