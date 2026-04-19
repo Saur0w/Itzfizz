@@ -39,32 +39,23 @@ export default function Landing() {
         });
 
         tl.to(textRef.current, {
-            width: '100%',
+            clipPath: "inset(0 0% 0 0)",
             ease: 'none',
         }, 0);
 
         tl.to(carRef.current, {
             x: '90vw',
             ease: 'none',
-        }, 0)
+        }, 0);
 
         statsRefs.current.forEach((stat, index) => {
             tl.fromTo(stat,
-                {
-                    opacity: 0,
-                    y: 40
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    ease: 'power2.out'
-                },
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, ease: 'power2.out' },
                 index * 0.15 + 0.1
             );
         });
-    }, {
-        scope: landingRef
-    });
+    }, { scope: landingRef });
 
     return (
         <section
@@ -109,10 +100,10 @@ export default function Landing() {
             >
                 <div
                     ref={textRef}
-                    className="absolute top-0 left-0 h-full bg-[#45db7d] overflow-hidden flex items-center whitespace-nowrap z-0"
-                    style={{ width: '0%' }}
+                    className="absolute top-0 left-0 h-full w-full bg-[#45db7d] flex items-center z-0 justify-center"
+                    style={{ clipPath: "inset(0 100% 0 0)" }}
                 >
-                    <h1 className="text-[#111111] text-8xl font-black tracking-[0.5em] leading-none">
+                    <h1 className="text-[#111111] text-9xl font-black tracking-widest leading-none whitespace-nowrap -translate-x-[10%]">
                         WELCOME ITZFIZZ
                     </h1>
                 </div>
