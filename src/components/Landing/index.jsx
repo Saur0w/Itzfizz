@@ -100,7 +100,7 @@ export default function Landing() {
             >
                 <div
                     ref={textRef}
-                    className="absolute top-0 left-0 h-full w-full bg-[#45db7d] flex items-center z-0 justify-center"
+                    className="absolute top-0 left-0 h-50.5 w-full bg-[#45db7d] flex items-center z-0 justify-center"
                     style={{ clipPath: "inset(0 100% 0 0)" }}
                 >
                     <h1 className="text-[#111111] text-9xl font-black tracking-widest leading-none whitespace-nowrap -translate-x-[10%]">
